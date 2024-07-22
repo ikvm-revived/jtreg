@@ -61,9 +61,9 @@ mixed_path() {
 }
 
 get_scm_type() {
-    if [ -d .hg ]; then
+    if [ -e .hg ]; then
         echo "HG"
-    elif [ -d .git ]; then
+    elif [ -e .git ]; then
         echo "GIT"
     else 
         echo "Error: unrecognized repository, it must be Git or Mercurial" >&2
